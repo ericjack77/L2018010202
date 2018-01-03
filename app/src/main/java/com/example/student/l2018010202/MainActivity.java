@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     CheckBox cb;
     Switch sw;
-    ProgressBar pb;
+    ProgressBar pb,pb2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         cb=findViewById(R.id.checkBox);
         sw=(Switch)findViewById(R.id.switch1);
         pb=findViewById(R.id.progressBar);
+        pb2=findViewById(R.id.progressBar2);
         cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -50,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+/*
+    public void click3(View v)
+    {
+        pb2.setProgress(pb2.getProgress()-10);
+    }
+
+    public void click4(View v)
+    {
+        pb2.setProgress(pb2.getProgress()+10);
+    }*/
 
     public void click1(View v)
     {
@@ -95,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
           }
 
-        };
+        }.start();
 
     }
 }
